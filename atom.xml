@@ -193,35 +193,6 @@
   </entry>
   
   <entry>
-    <title>Python学习-列表</title>
-    <link href="https://jrdit.github.io/2022/12/02/python-xue-xi-lie-biao/"/>
-    <id>https://jrdit.github.io/2022/12/02/python-xue-xi-lie-biao/</id>
-    <published>2022-12-02T02:47:21.000Z</published>
-    <updated>2024-03-17T10:31:30.847Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Day3-列表&quot;&gt;Day3-列表&lt;/h2&gt;
-&lt;h3 id=&quot;一、列表list&quot;&gt;一、列表list&lt;/h3&gt;
-&lt;h4</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="https://jrdit.github.io/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="https://jrdit.github.io/tags/Python/"/>
-    
-    <category term="学习" scheme="https://jrdit.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>内部审计五大流程与方法</title>
     <link href="https://jrdit.github.io/2022/12/02/nei-bu-shen-ji-wu-da-liu-cheng-yu-fang-fa/"/>
     <id>https://jrdit.github.io/2022/12/02/nei-bu-shen-ji-wu-da-liu-cheng-yu-fang-fa/</id>
@@ -245,9 +216,38 @@
     <category term="Internal Audit" scheme="https://jrdit.github.io/categories/Internal-Audit/"/>
     
     
+    <category term="内部审计" scheme="https://jrdit.github.io/tags/%E5%86%85%E9%83%A8%E5%AE%A1%E8%AE%A1/"/>
+    
     <category term="学习" scheme="https://jrdit.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="内部审计" scheme="https://jrdit.github.io/tags/%E5%86%85%E9%83%A8%E5%AE%A1%E8%AE%A1/"/>
+  </entry>
+  
+  <entry>
+    <title>Python学习-列表</title>
+    <link href="https://jrdit.github.io/2022/12/02/python-xue-xi-lie-biao/"/>
+    <id>https://jrdit.github.io/2022/12/02/python-xue-xi-lie-biao/</id>
+    <published>2022-12-02T02:47:21.000Z</published>
+    <updated>2024-03-17T10:31:30.847Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Day3-列表&quot;&gt;Day3-列表&lt;/h2&gt;
+&lt;h3 id=&quot;一、列表list&quot;&gt;一、列表list&lt;/h3&gt;
+&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://jrdit.github.io/categories/Python/"/>
+    
+    
+    <category term="学习" scheme="https://jrdit.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Python" scheme="https://jrdit.github.io/tags/Python/"/>
     
   </entry>
   
