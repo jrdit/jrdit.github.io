@@ -1124,7 +1124,7 @@
 
     
 
-    <!-- 自定义样式：实现右侧图片与社交链接垂直排列、同宽、图标分散对齐 -->
+    <!-- 自定义样式：右侧图片与社交链接垂直排列、同宽，社交图标居中并加大间距 -->
     <style>
         /* 重置主题原有的 .footer-right 为垂直布局，并覆盖宽度限制 */
         .footer .footer-right {
@@ -1132,7 +1132,7 @@
             display: flex;
             flex-direction: column;   /* 图片在上，社交链接在下 */
             align-items: flex-end;    /* 整体靠右对齐（桌面端） */
-            gap: 0.8rem;             /* 图片与社交链接之间的间距 */
+            gap: 0.8rem;             /* 图片与社交链接之间的垂直间距 */
         }
 
         /* 右侧图片：固定宽度，高度自适应 */
@@ -1149,12 +1149,12 @@
             max-width: 100%;
         }
 
-        /* 社交链接内部列表（假设主题输出为带有 .social-links 的容器）：
-           实现水平分散对齐，并覆盖原有 a 标签的 margin-left 样式 */
+        /* 社交链接内部列表：居中对齐，图标之间使用 gap 加大间距 */
         .footer .footer-right .social-link-wrap .social-links,
         .footer .footer-right .social-link-wrap ul {
             display: flex;
-            justify-content: space-between;  /* 左右两端对齐，自动分配间距 */
+            justify-content: center;   /* 让图标组整体居中，各图标之间用 gap 控制间距 */
+            gap: 48px;                /* 加大图标之间的水平间距（可根据喜好调整为 24px、32px 等） */
             width: 100%;
             padding: 0;
             margin: 0;
@@ -1163,16 +1163,16 @@
 
         /* 社交链接内的每个图标链接 */
         .footer .footer-right .social-link-wrap a {
-            margin-left: 0 !important;   /* 移除原有的左边距，让 space-between 控制间距 */
+            margin-left: 0 !important;   /* 移除原有的左边距，避免干扰 */
             font-size: 1.6rem;
-            color: inherit;              /* 继承父级颜色，或自定义 */
+            color: inherit;              /* 继承父级颜色 */
             transition: color 0.2s;
         }
         .footer .footer-right .social-link-wrap a:hover {
             color: #ffb74d;              /* 与主题悬浮色一致 */
         }
 
-        /* 移动端适配：居中对齐，宽度适当缩小 */
+        /* 移动端适配：居中对齐，宽度适当缩小，间距微调 */
         @media (max-width: 600px) {
             .footer .container.row {
                 flex-direction: column;
@@ -1191,9 +1191,10 @@
                 width: 80%;               /* 比例缩小，最大仍为 260px */
                 max-width: 260px;
             }
-            /* 移动端图标可改为 space-around，避免过于拥挤 */
+            /* 移动端图标间距稍微缩小，但依然宽松 */
             .footer .footer-right .social-link-wrap .social-links {
-                justify-content: space-around;
+                gap: 20px;
+                justify-content: center;
             }
         }
 
@@ -1293,7 +1294,7 @@
             
         </div>
 
-        <!-- 右侧区域：图片在上，社交链接在下，且社交链接与图片同宽，内部图标水平分散对齐 -->
+        <!-- 右侧区域：图片在上，社交链接在下，同宽，图标居中等距排列 -->
         <div class="footer-right">
             <img class="right-image" src="https://cdn.jsdelivr.net/gh/jrdit/Picture@b4503a1048759bdd50fd2c639944e42f9433aa8c/1720251549143wechatgzh.png" alt="Footer Image">
             <div class="social-link-wrap">
