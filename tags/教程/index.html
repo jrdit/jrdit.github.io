@@ -275,7 +275,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                似曾相识燕归来
+                轻舟已过万重山
                 
             </div>
 
@@ -289,7 +289,7 @@
                             
                                 "清醒时做事，迷茫时读书，焦虑时运动。",
                             
-                                "轻舟已过万重山~",
+                                "关关难过关关过，前路漫漫亦灿灿；夜夜难熬夜夜熬，往事坎坷亦澜澜。",
                             
                         ],
                         startDelay: 300,
@@ -365,37 +365,10 @@
                 </a>
                 
                 
-                <a href="/tags/Hexo/" title="Hexo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #FEF9E7;">Hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%95%99%E7%A8%8B/" title="教程: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="教程" style="background-color: #F8F9F9;">教程
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%86%85%E9%83%A8%E5%AE%A1%E8%AE%A1/" title="内部审计: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="内部审计" style="background-color: #82E0AA;">内部审计
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/" title="资产负债表: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="资产负债表" style="background-color: #D7BDE2;">资产负债表
+                            data-tagname="资产负债表" style="background-color: #FEF9E7;">资产负债表
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -404,7 +377,7 @@
                 <a href="/tags/%E8%B4%A2%E5%8A%A1%E5%88%86%E6%9E%90/" title="财务分析: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="财务分析" style="background-color: #A3E4D7;">财务分析
+                            data-tagname="财务分析" style="background-color: #F8F9F9;">财务分析
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -413,8 +386,35 @@
                 <a href="/tags/IPO/" title="IPO: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="IPO" style="background-color: #85C1E9;">IPO
+                            data-tagname="IPO" style="background-color: #82E0AA;">IPO
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Hexo/" title="Hexo: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Hexo" style="background-color: #D7BDE2;">Hexo
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%95%99%E7%A8%8B/" title="教程: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="教程" style="background-color: #A3E4D7;">教程
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%86%85%E9%83%A8%E5%AE%A1%E8%AE%A1/" title="内部审计: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="内部审计" style="background-color: #85C1E9;">内部审计
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -595,15 +595,102 @@
 <script src="https://cdn.jsdelivr.net/gh/jrdit/jrdit.github.io/libs/aplayer/Meting.min.js"></script>
 
     
+
+    <!-- 自定义样式：实现右侧图片与社交链接垂直排列、同宽、图标分散对齐 -->
+    <style>
+        /* 重置主题原有的 .footer-right 为垂直布局，并覆盖宽度限制 */
+        .footer .footer-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;   /* 图片在上，社交链接在下 */
+            align-items: flex-end;    /* 整体靠右对齐（桌面端） */
+            gap: 0.8rem;             /* 图片与社交链接之间的间距 */
+        }
+
+        /* 右侧图片：固定宽度，高度自适应 */
+        .footer .footer-right .right-image {
+            width: 260px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 社交链接外层容器：宽度与图片相同 */
+        .footer .footer-right .social-link-wrap {
+            width: 260px;
+            max-width: 100%;
+        }
+
+        /* 社交链接内部列表（假设主题输出为带有 .social-links 的容器）：
+           实现水平分散对齐，并覆盖原有 a 标签的 margin-left 样式 */
+        .footer .footer-right .social-link-wrap .social-links,
+        .footer .footer-right .social-link-wrap ul {
+            display: flex;
+            justify-content: space-between;  /* 左右两端对齐，自动分配间距 */
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* 社交链接内的每个图标链接 */
+        .footer .footer-right .social-link-wrap a {
+            margin-left: 0 !important;   /* 移除原有的左边距，让 space-between 控制间距 */
+            font-size: 1.6rem;
+            color: inherit;              /* 继承父级颜色，或自定义 */
+            transition: color 0.2s;
+        }
+        .footer .footer-right .social-link-wrap a:hover {
+            color: #ffb74d;              /* 与主题悬浮色一致 */
+        }
+
+        /* 移动端适配：居中对齐，宽度适当缩小 */
+        @media (max-width: 600px) {
+            .footer .container.row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer .footer-center {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .footer .footer-right {
+                width: 100%;
+                align-items: center;      /* 移动端整体居中 */
+            }
+            .footer .footer-right .right-image,
+            .footer .footer-right .social-link-wrap {
+                width: 80%;               /* 比例缩小，最大仍为 260px */
+                max-width: 260px;
+            }
+            /* 移动端图标可改为 space-around，避免过于拥挤 */
+            .footer .footer-right .social-link-wrap .social-links {
+                justify-content: space-around;
+            }
+        }
+
+        /* 以下为保留原有中间区域样式和隐藏左侧区域的必要覆盖（可选） */
+        .footer .footer-left {
+            display: none;
+        }
+        .footer .container.row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .footer-center {
+            flex: 2;
+            text-align: center;
+        }
+    </style>
+
     <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <!-- 页脚左侧图片 -->
-        <div class="footer-left" style="text-align: left; padding: 0;">
-            <img src="https://cdn.jsdelivr.net/gh/jrdit/Picture@b4503a1048759bdd50fd2c639944e42f9433aa8c/1720251549143wechatgzh.png" alt="Footer Image" style="width: 260px; height: auto;">
-        </div>
+        <!-- 中间版权、统计、运行时间等内容 -->
         <div class="footer-center">
             Copyright&nbsp;&copy;
             
-                <span id="year">1996-2025</span>
+                <span id="year">1996-2026</span>
             
             <a href="/about" target="_blank">Jrin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -652,16 +739,15 @@
                     var todayHour = today.getHours();
                     var todayMinute = today.getMinutes();
                     var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    // 修正月份: UTC 月份从0开始，需减1
+                    var t1 = Date.UTC(startYear, startMonth - 1, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth - 1, todayDate, todayHour, todayMinute, todaySecond);
                     var diff = t2 - t1;
                     var diffYears = Math.floor(diff / years);
                     var diffDays = Math.floor((diff / days) - diffYears * 365);
                     var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
                         document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
@@ -678,7 +764,12 @@
             <br>
             
         </div>
+
+        <!-- 右侧区域：图片在上，社交链接在下，且社交链接与图片同宽，内部图标水平分散对齐 -->
         <div class="footer-right">
+            <img class="right-image" src="https://cdn.jsdelivr.net/gh/jrdit/Picture@b4503a1048759bdd50fd2c639944e42f9433aa8c/1720251549143wechatgzh.png" alt="Footer Image">
+            <div class="social-link-wrap">
+                
     <a href="https://github.com/jrdit" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -717,12 +808,13 @@
         <i class="fas fa-rss"></i>
     </a>
 
-</div>
+
+            </div>
+        </div>
     </div>
 </footer>
 
 <div class="progress-bar"></div>
-
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
